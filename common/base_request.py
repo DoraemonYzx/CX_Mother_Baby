@@ -9,12 +9,14 @@
 import requests
 import logging
 from public import config
-
+import urllib3
 """
 封装HTTP请求操作
 1.http_request是主方法，直接供外部调用
 2.__hppt_get、__http_post是实际底层分类调用的方法
 """
+urllib3.disable_warnings()
+s = requests.session()
 
 
 class RequestInterface(object):
@@ -48,7 +50,7 @@ class RequestInterface(object):
         try:
             if interface_url != '':
                 temp_interface_param = self.__new_param(interface_param)
-                response = requests.post(url=interface_url, headers=headerdata, data=temp_interface_param, verify=False, timeout=10)
+                response = s.post(url=interface_url, headers=headerdata, data=temp_interface_param, verify=False, timeout=10)
                 if response.status_code == 200:
                     durtime = response.elapsed.microseconds / 1000  # 发起请求和响应到大的时间，单位ms
                     result = {'code': '0000', 'message': '成功', 'data': response.text}
@@ -87,7 +89,7 @@ class RequestInterface(object):
                     requrl = interface_url+temp_interface_parm
                 else:
                     requrl = interface_url+'?'+temp_interface_parm
-                response = requests.get(url=requrl, headers=headerdata, verify=False, timeout=10)
+                response = s.get(url=requrl, headers=headerdata, verify=False, timeout=10)
                 if response.status_code == 200:
                     durtime = response.elapsed.microseconds / 1000  # 发起请求和相应到达的时间，单位ms
                     result = {'code': '0000', 'message': '成功', 'data': response.text}
