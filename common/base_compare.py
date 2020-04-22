@@ -90,16 +90,20 @@ class CompareParm(object):
                     list_params_to_compare = eval(params_to_compare)  # 将数据库表unicode编码数据转换成原列表
                     if set(list_params_to_compare).issubset(set(temp_result_list_response)):  # 集合的包含关系
                         result = {'code': '0000', 'message': '参数完整性比较一致', 'data': []}
+                        print("预期返回参数为：%s" % list_params_to_compare)
+                        print("实际返回参数为：%s" % set(temp_result_list_response))
                         print(result['message'])
                     else:
                         result = {'code': '3001', 'message': '实际结果中元素不都在预期结果中', 'data': []}
+                        print("预期返回参数为：%s" % list_params_to_compare)
+                        print("实际返回参数为：%s" % set(temp_result_list_response))
                         print(result['message'])
-
                 else:
                     result = {'code': '4001', 'message': '用例中待比较参数集错误', 'data': params_to_compare}
+                    print("预期返回参数为：%s" % eval(params_to_compare))
+                    print("实际返回参数为：%s" % set(temp_result_list_response))
                     print(result['message'])
-                    print(result['data'])
-                    print(type(params_to_compare))
+                    print("预期返回参数的数据格式为：%s" % type(params_to_compare))
             else:
                 result = {'code': '2001', 'message': '调用__recur_params方法返回错误', 'data': []}
                 print(result['message'])
@@ -116,13 +120,10 @@ class CompareParm(object):
     def __recur_params(self, result_interface):
         try:
             print("调用__recur_paramsf方法")
-            print(result_interface)
             if isinstance(result_interface, str):  # 入参是字符串类型且能被转换成字典
                 temp_result_interface = json.loads(result_interface)
-                print(temp_result_interface)
                 self.__recur_params(temp_result_interface)
             elif isinstance(result_interface, dict):  # 入参是字典
-                print("进入elif")
                 for key, value in result_interface.items():
                     self.result_list_response.append(key)
                     if isinstance(value, list):

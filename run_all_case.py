@@ -22,7 +22,6 @@ if __name__ == '__main__':
     with open(report_name, 'wb') as f:
         runner = HTMLTestRunner(stream=f,
                                 title="Demo测试报告",
-                                description="！！！！",
-                                retry=1)
+                                description="！！！！")   # retry=1  失败重跑次数
         runner.run(discover)
     f.close()

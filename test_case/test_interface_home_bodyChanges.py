@@ -12,6 +12,7 @@ from common.base_compare import CompareParm
 import requests
 from public import config
 import json
+import yaml
 """
 辣妈宝宝发育列表接口
 """
@@ -23,6 +24,11 @@ h = {
     }
 data = {}
 
+data_path = config.data_path+'111.yml'
+with open(data_path, "r+", encoding='utf-8') as file:
+    y = yaml.load_all(file, Loader=yaml.FullLoader)
+    print(y)
+
 
 class Test(unittest.TestCase):
 
@@ -33,8 +39,7 @@ class Test(unittest.TestCase):
 
     def test(self):
         result = self.r.http_request(interface_url=url, headerdata=h, interface_param=data, request_type="post")
-        print(result['data'])
         expected_key = ['status', 'msg', 'data']
         compare_result = self.compare.compare_params_complete(result_interface=result['data'], params_to_compare=json.dumps(expected_key))
-        self.assertTrue(result['code'] == '0000')
-        self.assertTrue(compare_result['code'] == '0000')
+        self.assertTrue(result['code'] == '0000', msg="接口返回状态码不是200")
+        self.assertTrue(compare_result['code'] == '0000', msg="必须返回的参数不包含在实际返回参数中")

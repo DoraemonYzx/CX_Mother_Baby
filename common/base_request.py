@@ -67,9 +67,9 @@ class RequestInterface(object):
             logger = logging.getLogger(__name__)
             logger.exception(e)
         if result['code'] == '0000':
-            print("处理HTTP请求成功，返回的数据是：%s" % result['data'])
+            print("处理HTTP请求成功！'\n'返回的数据是：%s" % result['data'])
         elif result['code'] == '9999':
-            print("系统异常：%s" % result['data'])
+            print("系统异常!'\n异常原因为:'%s" % result['data'])
         else:
             print("处理HTTP请求失败：%s，返回的数据是：%s" % (result['message'], result['data']))
         return result
