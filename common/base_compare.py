@@ -24,34 +24,42 @@ class CompareParm(object):
         self.result_list_response = []  # 定义用来存储参数集的空列表
 
     # 定义关键参数值(code)比较
-    def compare_code(self, result_interface):
+    @staticmethod
+    def compare_code(result_interface, code, expected_code):
         """
         :param result_interface: HTTP返回包数据
+        :param code: 需要比对的code名
+        :param expected_code: 预期code值
         :return: 返回信息message，数据data
         """
         try:
             if result_interface.startswith('{') and isinstance(result_interface, str):
                 temp_result_interface = json.loads(result_interface)  # 将字符类型转换成字典类型
-                print("temp_result_interface= %s" % temp_result_interface)
-                temp_code_to_compare = self.params_interface['code_to_compare']  # 获取待比较code的名称
-                print("temp_code_to_compare = %s" % temp_code_to_compare)
+                temp_code_to_compare = code  # 获取待比较code的名称
                 if temp_code_to_compare in temp_result_interface.keys():
-                    if str(temp_result_interface[temp_code_to_compare]) == str(self.params_interface['code_expect']):
-                        result = {'code': '0000', 'message': '关键字参数值相同', 'data': []}
-                    elif str(temp_result_interface[temp_code_to_compare]) != str(self.params_interface['code_expect']):
-                        result = {'code': '1003', 'message': '关键字参数值不相同', 'data': []}
+                    if str(temp_result_interface[temp_code_to_compare]) == str(expected_code):
+                        result = {'code': '0000', 'message': '关键字参数值相同', 'param': code, 'expected_code': str(expected_code),
+                                  'actual_key': str(temp_result_interface[temp_code_to_compare])}
+                    elif str(temp_result_interface[temp_code_to_compare]) != str(expected_code):
+                        result = {'code': '1003', 'message': '关键字参数值不相同', 'param': code, 'expected_code': str(expected_code),
+                                  'actual_key': str(temp_result_interface[temp_code_to_compare])}
                     else:
-                        result = {'code': '1002', 'message': '关键字参数值比较出错', 'data': []}
+                        result = {'code': '1002', 'message': '关键字参数值比较出错', 'param': code, 'expected_code': str(expected_code),
+                                  'actual_key': str(temp_result_interface[temp_code_to_compare])}
                 else:
-                    result = {'code': '1001', 'message': '返回包数据无关键值参数', 'data': []}
+                    result = {'code': '1001', 'message': '返回包数据无关键值参数', 'param': code, 'expected_code': str(expected_code),
+                              'actual_key': str(temp_result_interface[temp_code_to_compare])}
             else:
-                result = {'code': '1000', 'message': '返回包格式不合法', 'data': []}
+                result = {'code': '1000', 'message': '返回包格式不合法', 'param': code, 'expected_code': str(expected_code), 'actual_key': ''}
         except Exception as e:
             result = {'code': '9999', 'message': '关键值参数比较异常', 'data': e}
+            print(result['message'])
             logging.basicConfig(filename=config.src_path + '/log/syserror.log', level=logging.DEBUG,
                                 format='%(asctime)s %(filename)s[line:%(lineno)d]%(levelname)s %(message)s')
             logger = logging.getLogger(__name__)
             logger.exception(e)
+        print("message：%s'\n待比较参数名称为：%s'\n预期参数值为：%s'\n'实际参数值为：%s" %
+              (result['message'], result['param'], result['expected_code'], result['actual_key']))
         return result
 
     # 定义将接口返回数据中的参数名写入列表中
@@ -89,37 +97,31 @@ class CompareParm(object):
                 if isinstance(params_to_compare, str):  # 判断用例中预期结果是否为列表
                     list_params_to_compare = eval(params_to_compare)  # 将数据库表unicode编码数据转换成原列表
                     if set(list_params_to_compare).issubset(set(temp_result_list_response)):  # 集合的包含关系
-                        result = {'code': '0000', 'message': '参数完整性比较一致', 'data': []}
-                        print("预期返回参数为：%s" % list_params_to_compare)
-                        print("实际返回参数为：%s" % set(temp_result_list_response))
-                        print(result['message'])
+                        result = {'code': '0000', 'message': '参数完整性比较一致', 'expected_key': set(list_params_to_compare),
+                                  'actual_key': set(temp_result_list_response), 'expected_type': type(params_to_compare)}
                     else:
-                        result = {'code': '3001', 'message': '实际结果中元素不都在预期结果中', 'data': []}
-                        print("预期返回参数为：%s" % list_params_to_compare)
-                        print("实际返回参数为：%s" % set(temp_result_list_response))
-                        print(result['message'])
+                        result = {'code': '3001', 'message': '实际结果中元素不都在预期结果中', 'expected_key': set(list_params_to_compare),
+                                  'actual_key': set(temp_result_list_response), 'expected_type': type(params_to_compare)}
                 else:
-                    result = {'code': '4001', 'message': '用例中待比较参数集错误', 'data': params_to_compare}
-                    print("预期返回参数为：%s" % eval(params_to_compare))
-                    print("实际返回参数为：%s" % set(temp_result_list_response))
-                    print(result['message'])
-                    print("预期返回参数的数据格式为：%s" % type(params_to_compare))
+                    result = {'code': '4001', 'message': '用例中待比较参数集错误不是str', 'expected_key': '',
+                              'actual_key': set(temp_result_list_response), 'expected_type': type(params_to_compare)}
             else:
-                result = {'code': '2001', 'message': '调用__recur_params方法返回错误', 'data': []}
-                print(result['message'])
+                result = {'code': '2001', 'message': '调用__recur_params方法返回错误', 'expected_key': '',
+                          'actual_key': '', 'expected_type': type(params_to_compare)}
         except Exception as e:
-            result = {'code': '9999', 'message': '参数完整性比较异常', 'data': e}
-            print(result['message'])
+            result = {'code': '9999', 'message': '参数完整性比较异常', 'expected_key': '', 'actual_key': '',
+                      'expected_type': type(params_to_compare)}
             logging.basicConfig(filename=config.src_path + '/log/syserror.log', level=logging.DEBUG,
                                 format='%(asctime)s %(filename)s[line:%(lineno)d]%(levelname)s %(message)s')
             logger = logging.getLogger(__name__)
             logger.exception(e)
+        print("message：%s'\n'预期返回参数为：%s\n'实际返回参数为：%s'\n'预期返回参数集合类型为：%s" %
+              (result['message'], result['expected_key'], result['actual_key'], result['expected_type']))
         return result
 
     # 定义递归操作,将接口返回数据中的参数名写入列表中(去重)
     def __recur_params(self, result_interface):
         try:
-            print("调用__recur_paramsf方法")
             if isinstance(result_interface, str):  # 入参是字符串类型且能被转换成字典
                 temp_result_interface = json.loads(result_interface)
                 self.__recur_params(temp_result_interface)
