@@ -56,3 +56,48 @@ class TestInterfaceHome(unittest.TestCase):
     def test_06_vaccinList(self, datalist):
         result = self.testcase.test_case(datalist)
         self.assertTrue(result)
+
+    @ddt.data(*interface_home.vaccinManage)
+    def test_07_vaccinManage(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.pregnantExaminationList)
+    def test_08_pregnantExaminationList(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.pregnantExaminationCheck)
+    def test_09_pregnantExaminationCheck(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.articleTitles)
+    def test_10_articleTitles(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.articleList)
+    def test_11_articleList(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.hotSearchKey)
+    def test_12_hotSearchKey(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.delSearchKey)
+    def test_13_delSearchKey(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.hospitalList)
+    def test_14_hospitalList(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.hospitalDetail)
+    def test_15_hospitalDetail(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
