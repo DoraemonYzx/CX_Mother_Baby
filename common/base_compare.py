@@ -102,6 +102,7 @@ class CompareParm(object):
                     else:
                         result = {'code': '3001', 'message': '实际结果中元素不都在预期结果中', 'expected_key': set(list_params_to_compare),
                                   'actual_key': set(temp_result_list_response), 'expected_type': type(params_to_compare)}
+
                 else:
                     result = {'code': '4001', 'message': '用例中待比较参数集错误不是str', 'expected_key': '',
                               'actual_key': set(temp_result_list_response), 'expected_type': type(params_to_compare)}
@@ -117,6 +118,9 @@ class CompareParm(object):
             logger.exception(e)
         print("message：%s'\n'预期返回参数为：%s\n'实际返回参数为：%s'\n'预期返回参数集合类型为：%s" %
               (result['message'], result['expected_key'], result['actual_key'], result['expected_type']))
+        for i in result['expected_key']:
+            if i not in result['actual_key']:
+                print("没有返回的必须参数为:%s" % i)
         return result
 
     # 定义递归操作,将接口返回数据中的参数名写入列表中(去重)

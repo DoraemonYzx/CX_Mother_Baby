@@ -313,7 +313,7 @@ function drawCircle(pass, fail, error){
         ctx.fillStyle = color[i];
         ctx.fillRect(posX, posY + 20 * i, width, height);
         ctx.moveTo(posX, posY + 20 * i);
-        ctx.font = 'bold 14px';
+        ctx.font = 'bold 15px';
         ctx.fillStyle = color[i];
         var percent = text_arr[i] + ":"+data[i];
         ctx.fillText(percent, textX, textY + 20 * i);
@@ -492,7 +492,7 @@ a.popup_link:hover {
     background-color: #E6E6D6;
     font-family: "Lucida Console", "Courier New", Courier, monospace;
     text-align: left;
-    font-size: 8pt;
+    font-size: 10pt;
 }
 
 }

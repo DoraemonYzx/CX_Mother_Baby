@@ -21,6 +21,8 @@ compare = CompareParm()
 
 class TestCase(object):
     def test_case(self, datalist):
+        print(datalist['interface'])
+        print(datalist['msg'])
         url = config.base_url + datalist['url']
         result = r.http_request(interface_url=url, headerdata=datalist['h'],
                                 interface_param=datalist['d'], request_type=datalist['mode'])

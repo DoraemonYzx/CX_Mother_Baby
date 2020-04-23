@@ -12,6 +12,7 @@ import time
 
 test_dir = './test_case'
 discover = unittest.defaultTestLoader.discover(start_dir=test_dir, pattern="test*.py")
+print(discover)
 
 if __name__ == '__main__':
     report_dir = './test_report'
@@ -21,7 +22,7 @@ if __name__ == '__main__':
     report_name = report_dir+'/'+'result.html'
     with open(report_name, 'wb') as f:
         runner = HTMLTestRunner(stream=f,
-                                title="Demo测试报告",
-                                description="！！！！")   # retry=1  失败重跑次数
+                                title="常笑母婴接口测试报告",
+                                description="！！！！！")   # retry=1  失败重跑次数
         runner.run(discover)
     f.close()

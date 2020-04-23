@@ -28,16 +28,31 @@ class TestInterfaceHome(unittest.TestCase):
         cls.testcase = TestCase()
 
     @ddt.data(*interface_home.bodyChanges)
-    def test_interface_home_bodyChanges(self, datalist):
-        # url = config.base_url + datalist['url']
-        # result = self.r.http_request(interface_url=url, headerdata=datalist['h'],
-        #                              interface_param=datalist['d'], request_type=datalist['mode'])
-        # compare_code = self.compare.compare_code(result_interface=result['data'], code=datalist['code'],
-        #                                          expected_code=datalist['expected_code'])
-        # compare_params = self.compare.compare_params_complete(result_interface=result['data'],
-        #                                                       params_to_compare=json.dumps(datalist['expected_key']))
-        # self.assertTrue(result['code'] == '0000', msg="接口返回状态码不是200")
-        # self.assertTrue(compare_code['code'] == '0000', msg="参数值比较不一致")
-        # self.assertTrue(compare_params['code'] == '0000', msg="必须返回的参数不包含在实际返回参数中")
+    def test_01_bodyChanges(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.growChangeByDay)
+    def test_02_growChangeByDay(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.motherChanges)
+    def test_03_motherChanges(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.babyChanges)
+    def test_04_babyChanges(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.babyChangeByDay)
+    def test_05_babyChangeByDay(self, datalist):
+        result = self.testcase.test_case(datalist)
+        self.assertTrue(result)
+
+    @ddt.data(*interface_home.vaccinList)
+    def test_06_vaccinList(self, datalist):
         result = self.testcase.test_case(datalist)
         self.assertTrue(result)

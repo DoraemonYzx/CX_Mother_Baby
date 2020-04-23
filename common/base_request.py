@@ -66,7 +66,7 @@ class RequestInterface(object):
                                 format='%(asctime)s %(filename)s[line:%(lineno)d]%(levelname)s %(message)s')
             logger = logging.getLogger(__name__)
             logger.exception(e)
-        print("message：%s'\n'返回的数据是：%s" % (result['message'], result['data']))
+        print("接口请求结果：%s'\n'返回的数据是：%s" % (result['message'], result['data']))
         return result
 
     # GET请求，参数在接口地址后面
@@ -100,7 +100,7 @@ class RequestInterface(object):
                                 format='%(asctime)s %(filename)s[line:%(lineno)d]%(levelname)s %(message)s')
             logger = logging.getLogger(__name__)
             logger.exception(e)
-        print("message：%s'\n'返回的数据是：%s" % (result['message'], result['data']))
+        print("接口请求结果：%s'\n'返回的数据是：%s" % (result['message'], result['data']))
         return result
 
     # 统一处理HTTP请求
