@@ -619,3 +619,30 @@ hospitalDetail = [
                       'icon', 'telNum', 'id', 'goodAt'],
     }
 ]
+
+doctorSearch = [
+    {
+     'interface': '医生搜索接口 注：返回内容已修改',
+     'msg': '没有参数',
+     'url': '/interface/home/doctorSearch',
+     'mode': 'post',
+     'h': {'Content-Type': 'application/json'},
+     'd': '',
+     'code': 'status',
+     'expected_code': '0000',
+     'expected_key': ['status', 'msg', 'data', 'name', 'department', 'info', 'hospitalName', 'goodAt', 'score',
+                      'year', 'icon', 'doctorNo', 'id', 'desc'],
+     },
+    {
+     'interface': '医生搜索接口 注：返回内容已修改',
+     'msg': 'page =1,size=1,searchKey=1,hospitalNo=1',
+     'url': '/interface/home/doctorSearch',
+     'mode': 'post',
+     'h': {'Content-Type': 'application/json'},
+     'd': '',
+     'code': 'status',
+     'expected_code': '0000',
+     'expected_key': ['status', 'msg', 'data', 'name', 'department', 'info', 'hospitalName', 'goodAt', 'score',
+                      'year', 'icon', 'doctorNo', 'id', 'desc'],
+     }
+]
