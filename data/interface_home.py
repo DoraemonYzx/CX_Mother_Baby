@@ -231,7 +231,20 @@ vaccinList = [
      'expected_code': '0000',
      'expected_key': ['status', 'msg', 'data', 'title', 'timeInfo', 'bornMonth', 'info',
                       'prvents', 'program', 'warm', 'isAready', 'id'],
-     }
+     },
+
+    {
+     'interface': '疫苗列表',
+     'msg': 'babyId=123456,tel=11113382822140',
+     'url': '/interface/home/vaccinList',
+     'mode': 'post',
+     'h': {'Content-Type': 'application/json'},
+     'd': {'babyId': 123456, 'tel': 11113382822140},
+     'code': 'status',
+     'expected_code': '0000',
+     'expected_key': ['status', 'msg', 'data', 'title', 'timeInfo', 'bornMonth', 'info',
+                      'prvents', 'program', 'warm', 'isAready', 'id'],
+     },
 ]
 
 vaccinManage = [
@@ -297,6 +310,19 @@ pregnantExaminationList = [
      'expected_key': ['status', 'msg', 'data', 'week', 'time', 'isEffective', 'id', 'plan', 'cgCheck',
                       'tsCheck', 'zdItem', 'warm'],
      },
+
+    {
+     'interface': '获取产检列表',
+     'msg': 'tel=1811845128589',
+     'url': '/interface/home/pregnantExaminationList',
+     'mode': 'post',
+     'h': {'Content-Type': 'application/json'},
+     'd': {'tel': '1811845128589'},
+     'code': 'status',
+     'expected_code': '0000',
+     'expected_key': ['status', 'msg', 'data', 'week', 'time', 'isEffective', 'id', 'plan', 'cgCheck',
+                      'tsCheck', 'zdItem', 'warm'],
+     }
 ]
 
 pregnantExaminationCheck = [
@@ -538,7 +564,7 @@ hospitalList = [
      'h': {'Content-Type': 'application/x-www-form-urlencoded'},
      'd': {'page': '1', 'size': '1', 'name': '1', 'type': '10'},
      'code': 'status',
-     'expected_code': '0002',
+     'expected_code': '0001',
      'expected_key': '',
     }
 ]
@@ -555,7 +581,6 @@ hospitalDetail = [
      'expected_code': '0001',
      'expected_key': '',
      },
-
     {
      'interface': '医院详细信息',
      'msg': 'id=1',
@@ -563,6 +588,30 @@ hospitalDetail = [
      'mode': 'get',
      'h': '',
      'd': 'id=1',
+     'code': 'status',
+     'expected_code': '0002',
+     'expected_key': '',
+    },
+    {
+     'interface': '医院详细信息',
+     'msg': 'id=12',
+     'url': '/interface/home/hospitalDetail',
+     'mode': 'get',
+     'h': '',
+     'd': 'id=12',
+     'code': 'status',
+     'expected_code': '0000',
+     'expected_key': ['status', 'msg', 'name', 'addr', 'desc', 'telNum', 'icon', 'level', 'tips',
+                      'doctors', 'name', 'department', 'info', 'hospitalName', 'desc', 'score', 'year',
+                      'icon', 'telNum', 'id', 'goodAt'],
+    },
+    {
+     'interface': '医院详细信息',
+     'msg': 'id=\'12\'',
+     'url': '/interface/home/hospitalDetail',
+     'mode': 'get',
+     'h': '',
+     'd': 'id=\'12\'',
      'code': 'status',
      'expected_code': '0000',
      'expected_key': ['status', 'msg', 'name', 'addr', 'desc', 'telNum', 'icon', 'level', 'tips',

@@ -284,3 +284,238 @@ AttributeError: 'int' object has no attribute 'startswith'
 2020-04-23 23:55:14,303 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 86
 2020-04-23 23:55:14,327 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail HTTP/1.1" 200 88
 2020-04-23 23:55:14,352 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=1 HTTP/1.1" 200 86
+2020-04-24 09:11:49,976 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:11:50,000 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:11:50,000 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:11:50,011 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:11:50,012 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:11:50,023 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:11:50,023 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:11:50,035 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:11:50,036 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:11:50,046 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 09:11:50,047 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:11:50,056 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 09:11:50,057 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:11:50,070 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 101
+2020-04-24 09:11:50,102 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 335
+2020-04-24 09:11:50,126 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 86
+2020-04-24 09:11:50,143 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail HTTP/1.1" 200 88
+2020-04-24 09:11:50,166 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=1 HTTP/1.1" 200 86
+2020-04-24 09:17:50,059 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:17:50,075 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:17:50,075 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:17:50,088 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:17:50,089 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:17:50,103 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:17:50,103 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:17:50,116 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:17:50,116 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:17:50,129 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 09:17:50,131 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:17:50,143 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 09:17:50,144 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:17:50,158 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 101
+2020-04-24 09:17:50,180 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 335
+2020-04-24 09:17:50,198 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 86
+2020-04-24 09:17:50,212 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail HTTP/1.1" 200 88
+2020-04-24 09:17:50,230 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=1 HTTP/1.1" 200 86
+2020-04-24 09:51:23,816 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:51:23,832 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:51:23,832 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:51:23,847 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:51:23,848 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:51:23,863 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:51:23,863 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:51:23,876 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 09:51:23,878 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:51:23,892 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 09:51:23,892 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:51:23,907 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 09:51:23,907 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 09:51:23,924 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 101
+2020-04-24 09:51:23,947 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 335
+2020-04-24 09:51:23,967 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 86
+2020-04-24 09:51:23,983 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail HTTP/1.1" 200 88
+2020-04-24 09:51:24,000 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=1 HTTP/1.1" 200 86
+2020-04-24 09:51:24,019 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=12 HTTP/1.1" 200 1277
+2020-04-24 11:19:34,758 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:19:34,773 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 11:19:34,773 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:19:34,788 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 11:19:34,788 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:19:34,801 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 11:19:34,802 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:19:34,816 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 11:19:34,816 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:19:34,831 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 11:19:34,832 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:19:34,845 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 11:19:34,846 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:19:34,860 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 101
+2020-04-24 11:19:34,884 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 335
+2020-04-24 11:19:34,904 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 86
+2020-04-24 11:19:34,919 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail HTTP/1.1" 200 88
+2020-04-24 11:19:34,936 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=1 HTTP/1.1" 200 86
+2020-04-24 11:19:34,958 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=12 HTTP/1.1" 200 1277
+2020-04-24 11:19:34,976 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id='12' HTTP/1.1" 200 98
+2020-04-24 11:21:58,603 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:21:58,612 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 11:21:58,612 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:21:58,624 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 11:21:58,624 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:21:58,631 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 11:21:58,632 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:21:58,641 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/articleList HTTP/1.1" 404 None
+2020-04-24 11:21:58,641 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:21:58,649 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 11:21:58,649 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:21:58,657 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hotSearchKey HTTP/1.1" 404 None
+2020-04-24 11:21:58,659 base_compare.py[line:60]ERROR 'int' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "D:\Api_project\CX_Mother_Baby\common\base_compare.py", line 36, in compare_code
+    if result_interface.startswith('{') and isinstance(result_interface, str):
+AttributeError: 'int' object has no attribute 'startswith'
+2020-04-24 11:21:58,667 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 101
+2020-04-24 11:21:58,680 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 335
+2020-04-24 11:21:58,690 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "POST /interface/home/hospitalList HTTP/1.1" 200 86
+2020-04-24 11:21:58,700 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail HTTP/1.1" 200 88
+2020-04-24 11:21:58,711 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=1 HTTP/1.1" 200 86
+2020-04-24 11:21:58,723 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id=12 HTTP/1.1" 200 1277
+2020-04-24 11:21:58,736 connectionpool.py[line:437]DEBUG https://testapicxcm.cxjk.com:443 "GET /interface/home/hospitalDetail?id='12' HTTP/1.1" 200 98
